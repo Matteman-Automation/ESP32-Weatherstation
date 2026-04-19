@@ -136,9 +136,9 @@ This project focuses on:
 
 ## 🔗 Useful links
 
-- YouTube channel: https://youtube.com/YOUR_CHANNEL_LINK  
-- Website: https://matteman.nl  
-- Weather station project page: https://matteman.nl/Home-Assistant/Projecten/Weerstation  
+- YouTube channel: [https://youtube.com/YOUR_CHANNEL_LINK ](https://www.youtube.com/@MattemanAutomation) 
+- Website: [https://matteman.nl](https://matteman.nl/)  
+- Weather station project page: [https://matteman.nl/Home-Assistant/Projecten/Weerstation](https://matteman.nl/Home-Assistant/Projecten/Weerstation/index)
 
 ---
 
