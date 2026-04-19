@@ -5,12 +5,12 @@ Measure temperature and humidity accurately using an ESP32 and SHT41 sensor, wit
 ---
 
 ## 🎬 Watch the full tutorial
-👉 https://youtube.com/YOUR_VIDEO_LINK
+👉 [https://youtube.com/YOUR_VIDEO_LINK](https://youtu.be/GVnyMMgceeY)
 
 ---
 
 ## 🌐 Full step-by-step guide
-👉 https://matteman.nl/YOUR_PROJECT_PAGE
+👉 [https://matteman.nl/YOUR_PROJECT_PAGE](https://matteman.nl/Home-Assistant/Projecten/Weerstation/Temperatuur-Luchtvochtigheid)
 
 ---
 
