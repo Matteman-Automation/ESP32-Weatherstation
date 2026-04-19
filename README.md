@@ -1,11 +1,17 @@
 # 🌦️ ESP32 Weather Station with Home Assistant
 
+# 🌦️ ESP32 Weather Station
+
+<p align="center">
+  <img src="https://matteman.nl/Home-Assistant/Projecten/weerstation/radiation-shield-hero.jpg" width="600"/>
+</p>
+
 Build a modular and reliable ESP32-based weather station with multiple sensors, fully integrated into Home Assistant via MQTT.
 
 ---
 
 ## 🎬 Watch the full video series
-👉 [https://youtube.com/YOUR_CHANNEL_LINK](https://www.youtube.com/playlist?list=PLKaMzy72TaQcMz4aPWDMtECpoyzQZCbpT)
+👉 [On YouTube](https://www.youtube.com/playlist?list=PLKaMzy72TaQcMz4aPWDMtECpoyzQZCbpT)
 
 ---
 
