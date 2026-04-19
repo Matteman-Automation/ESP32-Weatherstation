@@ -1,6 +1,5 @@
 # 🌦️ ESP32 Weather Station with Home Assistant
 
-# 🌦️ ESP32 Weather Station
 
 <p align="center">
   <img src="https://matteman.nl/Home-Assistant/Projecten/weerstation/radiation-shield-hero.jpg" width="600"/>
