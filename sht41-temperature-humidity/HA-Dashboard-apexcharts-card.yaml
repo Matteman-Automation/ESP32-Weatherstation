@@ -1,0 +1,15 @@
+type: custom:apexcharts-card
+graph_span: 7d
+header:
+  show: true
+  title: Buitentemperatuur afgelopen 7 dagen
+  show_states: true
+  colorize_states: true
+series:
+  - entity: sensor.weerstation_temperatuur
+    curve: smooth
+    type: line
+    stroke_width: 3
+    group_by:
+      duration: 15min
+      func: avg

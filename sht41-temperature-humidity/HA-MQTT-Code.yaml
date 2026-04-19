@@ -1,0 +1,43 @@
+- sensor:
+
+# **************************************************************************
+# **Weerstation
+# **************************************************************************
+
+  - name: Weerstation Temperatuur
+    unique_id: "weerstation_temp"
+    state_topic: "sensor/weerstation/temp"
+    unit_of_measurement: "ºC"
+    icon: mdi:thermometer
+
+  - name: Weerstation Luchtvochtigheid
+    unique_id: "weerstation_vocht"
+    state_topic: "sensor/weerstation/vocht"
+    unit_of_measurement: "%"
+    icon: mdi:water-percent
+    
+  - name: Weerstation absolute Luchtvochtigheid
+    unique_id: "weerstation_vocht_abs"
+    state_topic: "sensor/weerstation/vochtabs"
+    unit_of_measurement: "g/m³"
+    icon: mdi:thermometer
+    
+  - name: Weerstation Dauwpunt
+    unique_id: "weerstation_dauwpunt"
+    state_topic: "sensor/weerstation/dauwpunt"
+    unit_of_measurement: "ºC"
+    icon: mdi:water-percent
+
+  - name: Weerstation voelt als
+    unique_id: "weerstation_voelt_als"
+    state_topic: "sensor/weerstation/voeltals"
+    unit_of_measurement: "ºC"
+    icon: mdi:thermometer
+
+
+    
+
+  - name: Weerstation RSSI
+    unique_id: "weerstation_rssi"
+    state_topic: "sensor/weerstation/rssi"
+    unit_of_measurement: "dBm"
