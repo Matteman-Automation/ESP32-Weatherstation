@@ -1,0 +1,32 @@
+# **************************************************************************
+# **Weerstation
+# **************************************************************************
+
+
+
+- platform: statistics
+  name: "Weerstation luchtdruk verschil 10 minuten"
+  entity_id: sensor.weerstation_luchtdruk
+  state_characteristic: change
+  max_age:
+    minutes: 10
+  sampling_size: 100
+
+
+- platform: statistics
+  name: "Weerstation Luchtdruk verschil 3 uur"
+  entity_id: sensor.weerstation_luchtdruk
+  state_characteristic: change
+  max_age:
+    hours: 3
+  sampling_size: 500
+  precision: 2
+
+- platform: statistics
+  name: "Weerstation Luchtdruk verschil 6 uur"
+  entity_id: sensor.weerstation_luchtdruk
+  state_characteristic: change
+  max_age:
+    hours: 6
+  sampling_size: 1000
+  precision: 2
