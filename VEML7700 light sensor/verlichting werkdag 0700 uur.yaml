@@ -1,0 +1,22 @@
+alias: Verlichting - Werkdag om 07:00 aan bij donker
+description: >-
+  Zet de keuken, woonkamer en buitenlamp aan op werkdagen om 07:00 als het
+  donker is.
+triggers:
+  - at: "07:00:00"
+    trigger: time
+conditions:
+  - condition: state
+    entity_id: binary_sensor.workday_sensor
+    state: "on"
+  - condition: numeric_state
+    entity_id: sensor.weerstation_licht
+    below: 400
+actions:
+  - target:
+      entity_id:
+        - switch.keuken_led_sonoff_relay
+        - switch.woonkamer_lamp_kachel
+        - switch.sonoff_1000af2fcd_1
+    action: switch.turn_on
+mode: single

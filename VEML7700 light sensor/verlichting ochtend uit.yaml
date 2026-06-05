@@ -1,0 +1,28 @@
+alias: Verlichting - Ochtend uit bij voldoende licht of na zonsopkomst
+description: >-
+  Zet de lampen uit zodra het buiten licht genoeg is of 45 minuten na
+  zonsopkomst.
+triggers:
+  - entity_id: sensor.weerstation_licht
+    above: 400
+    for:
+      minutes: 2
+    trigger: numeric_state
+  - event: sunrise
+    offset: "00:45:00"
+    trigger: sun
+conditions:
+  - condition: time
+    after: "07:00:00"
+    before: "12:00:00"
+  - condition: state
+    entity_id: binary_sensor.workday_sensor
+    state: "on"
+actions:
+  - target:
+      entity_id:
+        - switch.keuken_led_sonoff_relay
+        - switch.woonkamer_lamp_kachel
+        - switch.sonoff_1000af2fcd_1
+    action: switch.turn_off
+mode: single

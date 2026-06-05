@@ -1,0 +1,14 @@
+alias: Verlichting - Altijd uit om 23:30
+description: Zet de keukenlamp, woonkamerlamp en buitenlamp altijd uit om 23:30.
+triggers:
+  - at: "23:30:00"
+    trigger: time
+conditions: []
+actions:
+  - target:
+      entity_id:
+        - switch.keuken_led_sonoff_relay
+        - switch.woonkamer_lamp_kachel
+        - switch.sonoff_1000af2fcd_1
+    action: switch.turn_off
+mode: single
