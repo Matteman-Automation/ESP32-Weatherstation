@@ -1,35 +1,27 @@
-alias: Verlichting - Aan bij donker tussen 07:00 en 23:30
+alias: Verlichting - Aan bij donker tussen 08:00 en 23:30
 description: Zet de lampen aan als het donker wordt en laat ze minimaal 15 minuten branden.
 triggers:
-  - entity_id: sensor.weerstation_licht
+  - trigger: numeric_state
+    entity_id: sensor.weerstation_licht
     below: 400
     for:
       minutes: 2
-    trigger: numeric_state
-  - at: "07:00:00"
-    trigger: time
-  - event: start
-    trigger: homeassistant
+  - trigger: homeassistant
+    event: start
 conditions:
   - condition: time
-    after: "07:00:00"
+    after: "08:00:00"
     before: "23:30:00"
   - condition: numeric_state
     entity_id: sensor.weerstation_licht
     below: 400
 actions:
-  - condition: time
-    after: "07:00:00"
-    before: "23:30:00"
-  - condition: numeric_state
-    entity_id: sensor.weerstation_licht
-    below: 400
-  - target:
+  - action: switch.turn_on
+    target:
       entity_id:
         - switch.keuken_led_sonoff_relay
         - switch.woonkamer_lamp_kachel
         - switch.sonoff_1000af2fcd_1
-    action: switch.turn_on
   - delay:
       minutes: 15
   - choose:
@@ -38,25 +30,25 @@ actions:
             entity_id: sensor.weerstation_licht
             above: 400
         sequence:
-          - target:
+          - action: switch.turn_off
+            target:
               entity_id:
                 - switch.keuken_led_sonoff_relay
                 - switch.woonkamer_lamp_kachel
                 - switch.sonoff_1000af2fcd_1
-            action: switch.turn_off
     default:
       - wait_for_trigger:
-          - entity_id: sensor.weerstation_licht
+          - trigger: numeric_state
+            entity_id: sensor.weerstation_licht
             above: 400
             for:
               minutes: 2
-            trigger: numeric_state
-          - at: "23:30:00"
-            trigger: time
-      - target:
+          - trigger: time
+            at: "23:30:00"
+      - action: switch.turn_off
+        target:
           entity_id:
             - switch.keuken_led_sonoff_relay
             - switch.woonkamer_lamp_kachel
             - switch.sonoff_1000af2fcd_1
-        action: switch.turn_off
-mode: restart
+mode: single
