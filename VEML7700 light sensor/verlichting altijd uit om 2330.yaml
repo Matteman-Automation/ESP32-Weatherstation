@@ -9,6 +9,5 @@ actions:
       entity_id:
         - switch.keuken_led_sonoff_relay
         - switch.woonkamer_lamp_kachel
-        - switch.sonoff_1000af2fcd_1
     action: switch.turn_off
 mode: single
